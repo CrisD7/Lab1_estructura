@@ -76,3 +76,48 @@ Thu Mar 19 07:15:35 PM UTC 2026:
  tests:  3|2
 total_score: 40/70
 a8c6a88
+Thu Mar 19 07:41:30 PM UTC 2026: 
+ exercises.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:93:18: error: comparison between pointer and integer [-Werror]
+   93 |    while (top(P1 != -1)){
+      |                  ^~
+exercises.c:93:18: error: passing argument 1 of ‘top’ makes pointer from integer without a cast [-Wint-conversion]
+   93 |    while (top(P1 != -1)){
+      |               ~~~^~~~~
+      |                  |
+      |                  int
+In file included from exercises.c:7:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+exercises.c:94:18: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   94 |       int elem = top(P1);
+      |                  ^~~
+exercises.c:95:17: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+   95 |       push(aux, elem);
+      |                 ^~~~
+      |                 |
+      |                 int
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:98:20: error: comparison between pointer and integer [-Werror]
+   98 |    while (top(aux) != -1){
+      |                    ^~
+exercises.c:99:18: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   99 |       int elem = top(aux);
+      |                  ^~~
+exercises.c:100:16: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  100 |       push(P2, elem);
+      |                ^~~~
+      |                |
+      |                int
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+77a09aa
