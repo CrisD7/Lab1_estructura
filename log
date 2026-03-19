@@ -37,3 +37,14 @@ exercises.c:77:8: error: unused variable ‘dato’ [-Werror=unused-variable]
       |        ^~~~
 cc1: all warnings being treated as errors
 3c41c05
+Thu Mar 19 07:09:22 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:77:10: error: unused variable ‘dato’ [-Werror=unused-variable]
+   77 |    void* dato = first(L);
+      |          ^~~~
+cc1: all warnings being treated as errors
+13926de
