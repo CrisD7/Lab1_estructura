@@ -121,3 +121,46 @@ stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
       |                         ~~~~~~^~~~
 cc1: all warnings being treated as errors
 77a09aa
+Thu Mar 19 07:44:04 PM UTC 2026: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:93:15: error: invalid use of incomplete typedef ‘Stack’ {aka ‘List’}
+   93 |    while (top(*P1 != -1)){
+      |               ^
+exercises.c:94:22: error: invalid use of incomplete typedef ‘Stack’ {aka ‘List’}
+   94 |       int elem = top(*P1);
+      |                      ^~~
+exercises.c:95:17: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+   95 |       push(aux, elem);
+      |                 ^~~~
+      |                 |
+      |                 int
+In file included from exercises.c:7:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:96:11: error: invalid use of incomplete typedef ‘Stack’ {aka ‘List’}
+   96 |       pop(*P1);
+      |           ^~~
+exercises.c:98:20: error: comparison between pointer and integer [-Werror]
+   98 |    while (top(aux) != -1){
+      |                    ^~
+exercises.c:99:18: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   99 |       int elem = top(aux);
+      |                  ^~~
+exercises.c:100:12: error: invalid use of incomplete typedef ‘Stack’ {aka ‘List’}
+  100 |       push(*P2, elem);
+      |            ^~~
+exercises.c:100:17: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Wint-conversion]
+  100 |       push(*P2, elem);
+      |                 ^~~~
+      |                 |
+      |                 int
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+cc1: all warnings being treated as errors
+827604f
