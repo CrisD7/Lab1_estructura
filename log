@@ -187,3 +187,17 @@ exercises.c:98:20: error: comparison between pointer and integer [-Werror]
       |                    ^~
 cc1: all warnings being treated as errors
 813631c
+Thu Mar 19 07:48:02 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:93:19: error: comparison between pointer and integer [-Werror]
+   93 |    while (top(P1) != -1){
+      |                   ^~
+exercises.c:98:20: error: comparison between pointer and integer [-Werror]
+   98 |    while (top(aux) != -1){
+      |                    ^~
+cc1: all warnings being treated as errors
+f79d25f
