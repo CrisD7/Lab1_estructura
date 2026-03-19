@@ -59,3 +59,14 @@ exercises.c:79:20: error: cast to pointer from integer of different size [-Werro
       |                    ^
 cc1: all warnings being treated as errors
 8ca28d0
+Thu Mar 19 07:14:26 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:79:21: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   79 |       if (elem == *((int*)elem)) popCurrent(L);
+      |                     ^
+cc1: all warnings being treated as errors
+33daab9
