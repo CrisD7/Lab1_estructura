@@ -23,3 +23,17 @@ Wed Mar 18 01:54:29 AM UTC 2026:
  tests:  2|3
 total_score: 20/70
 936a0e5
+Thu Mar 19 07:08:31 PM UTC 2026: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:77:15: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+   77 |    int dato = first(L);
+      |               ^~~~~
+exercises.c:77:8: error: unused variable ‘dato’ [-Werror=unused-variable]
+   77 |    int dato = first(L);
+      |        ^~~~
+cc1: all warnings being treated as errors
+3c41c05
