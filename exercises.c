@@ -120,7 +120,7 @@ int parentesisBalanceados(char *cadena) {
       }
       if (cadena[i] == ')'){
          if (top(pila) == NULL) return 0;
-         if (*(top(pila)) == '(') pop(pila);
+         if (&(top(pila)) == '(') pop(pila);
          return;
       }
       if (cadena[i] == ']'){
