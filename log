@@ -464,3 +464,29 @@ exercises.c:133:24: error: comparison between pointer and integer [-Werror]
       |                        ^~
 cc1: all warnings being treated as errors
 4b5bf47
+Fri Mar 20 02:40:15 AM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:124:10: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+  124 |          return;
+      |          ^~~~~~
+exercises.c:114:5: note: declared here
+  114 | int parentesisBalanceados(char *cadena) {
+      |     ^~~~~~~~~~~~~~~~~~~~~
+exercises.c:128:24: error: comparison between pointer and integer [-Werror]
+  128 |          if (top(pila) == '[') pop(pila);
+      |                        ^~
+exercises.c:129:10: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+  129 |          return;
+      |          ^~~~~~
+exercises.c:114:5: note: declared here
+  114 | int parentesisBalanceados(char *cadena) {
+      |     ^~~~~~~~~~~~~~~~~~~~~
+exercises.c:133:24: error: comparison between pointer and integer [-Werror]
+  133 |          if (top(pila) == '{') pop(pila);
+      |                        ^~
+cc1: all warnings being treated as errors
+dd7e5b6
