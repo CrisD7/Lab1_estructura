@@ -112,6 +112,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
+   if (sizeof(cadena) % 2 == 1) return 0;
    return 0;
 }
 
